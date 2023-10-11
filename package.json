@@ -1,0 +1,32 @@
+{
+    "name": "testing",
+    "version": "0.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "sideEffects": false,
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "scripts": {
+        "build": "rollup -c",
+        "compile": "npx babel  --plugins transform-react-jsx Component.js --out-file Component.compiled.js",
+        "build:component": "npm run compile && node server && npm run build"
+    },
+    "dependencies": {
+        "@babel/preset-react": "^7.22.15",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.14.6",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-commonjs": "^25.0.5",
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@rollup/plugin-replace": "^5.0.3",
+        "babel-plugin-transform-react-jsx": "^6.24.1",
+        "rollup": "^4.0.2",
+        "rollup-plugin-livereload": "^2.0.5",
+        "rollup-plugin-serve": "^2.0.2"
+    }
+}
